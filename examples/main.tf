@@ -19,7 +19,7 @@ locals {
 
 
 module "sns_topic" {
-  source = "../"
+  source = "git::https://github.com/kurrapradeep/terraform-aws-sns-module.git?ref=1.0.0"
   name              = local.name
   display_name      = "exchangetopic"
   kms_master_key_id = module.kms.key_id
